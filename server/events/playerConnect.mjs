@@ -1,6 +1,6 @@
 import * as alt from 'alt';
 import * as chat from 'chat';
-import ConnectionInfo from '../../../database/database';
+import ConnectionInfo from '../../database/database';
 
 const db = new ConnectionInfo();
 

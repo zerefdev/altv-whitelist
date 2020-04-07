@@ -1,5 +1,5 @@
 import * as chat from 'chat';
-import ConnectionInfo from '../../../database/database';
+import ConnectionInfo from '../../database/database';
 const db = new ConnectionInfo();
 const wlObjId = 'READ COMMENT';
 // get this from the whitelist collection,
