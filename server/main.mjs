@@ -19,8 +19,8 @@ alt.onClient('PlayerIdReady', (player, id) => {
       return;
     }
     alt.log(`[Whitelist] ${player.name} is trying to connect (${config.method} : ${id})`);
-    //whitelisted, now do whatever you want
-    //and if somehow discord is down
+    // whitelisted, now do whatever you want
+    // and if somehow discord is down
     // you can use licensehash
     // just edit config.mjs line 3
   });
