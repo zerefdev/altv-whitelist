@@ -1,16 +1,13 @@
 import * as alt from 'alt';
 
-alt.onServer('PlayerId', (method) => {
-  const discord = alt.Discord.currentUser.id;
-  const license = alt.getLicenseHash();
-  switch (method) {
-    case 'discord':
-      alt.emitServer('PlayerIdReady', discord);
-      break;
-    case 'license':
-      alt.emitServer('PlayerIdReady', license);
-      break;
-  }
+alt.onServer('PlayerId', () => {
+  const id = {
+    discord: alt.Discord.currentUser.id,
+    license: alt.getLicenseHash()
+  };
+
+  alt.emitServer('PlayerIdReady', id);
+
   // player info printed to the console
-  alt.log(`Your Information:\nDiscord: ${discord}\nLicense: ${license}`);
+  alt.log(`Your Information:\nDiscord: ${id.discord}\nLicense: ${id.license}`);
 });
